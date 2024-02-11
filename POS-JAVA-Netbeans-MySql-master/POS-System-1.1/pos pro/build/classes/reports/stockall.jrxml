@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="stockall" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f5079d43-93c8-487d-a1da-fe499c72c8cf">
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     company.`idcompany` AS company_idcompany,
+     company.`Name` AS company_Name,
+     company.`Address` AS company_Address,
+     company.`TP_NO` AS company_TP_NO,
+     company.`Email` AS company_Email,
+     company.`Web` AS company_Web,
+     company.`online` AS company_online,
+     company.`info` AS company_info,
+     company.`Comment` AS company_Comment,
+     stock.`idStock` AS stock_idStock,
+     stock.`Bill_ID` AS stock_Bill_ID,
+     stock.`Bar_Code` AS stock_Bar_Code,
+     stock.`PID` AS stock_PID,
+     stock.`Product_Name` AS stock_Product_Name,
+     stock.`Cat_ID` AS stock_Cat_ID,
+     stock.`Category_Name` AS stock_Category_Name,
+     stock.`Unit_Price` AS stock_Unit_Price,
+     stock.`Quantity` AS stock_Quantity,
+     stock.`Default_Unit` AS stock_Default_Unit,
+     stock.`MF_Date` AS stock_MF_Date,
+     stock.`Exp_Date` AS stock_Exp_Date,
+     stock.`B_N` AS stock_B_N,
+     stock.`SID` AS stock_SID,
+     stock.`Supplier_Name` AS stock_Supplier_Name,
+     stock.`Brand_Name` AS stock_Brand_Name,
+     stock.`Private_Note` AS stock_Private_Note
+FROM
+     `company` company,
+     `stock` stock]]>
+	</queryString>
+	<field name="company_idcompany" class="java.lang.Long"/>
+	<field name="company_Name" class="java.lang.String"/>
+	<field name="company_Address" class="java.lang.String"/>
+	<field name="company_TP_NO" class="java.lang.String"/>
+	<field name="company_Email" class="java.lang.String"/>
+	<field name="company_Web" class="java.lang.String"/>
+	<field name="company_online" class="java.lang.String"/>
+	<field name="company_info" class="java.lang.String"/>
+	<field name="company_Comment" class="java.lang.String"/>
+	<field name="stock_idStock" class="java.lang.Long"/>
+	<field name="stock_Bill_ID" class="java.lang.String"/>
+	<field name="stock_Bar_Code" class="java.lang.String"/>
+	<field name="stock_PID" class="java.lang.String"/>
+	<field name="stock_Product_Name" class="java.lang.String"/>
+	<field name="stock_Cat_ID" class="java.lang.String"/>
+	<field name="stock_Category_Name" class="java.lang.String"/>
+	<field name="stock_Unit_Price" class="java.lang.String"/>
+	<field name="stock_Quantity" class="java.lang.String"/>
+	<field name="stock_Default_Unit" class="java.lang.String"/>
+	<field name="stock_MF_Date" class="java.lang.String"/>
+	<field name="stock_Exp_Date" class="java.lang.String"/>
+	<field name="stock_B_N" class="java.lang.String"/>
+	<field name="stock_SID" class="java.lang.String"/>
+	<field name="stock_Supplier_Name" class="java.lang.String"/>
+	<field name="stock_Brand_Name" class="java.lang.String"/>
+	<field name="stock_Private_Note" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="b65d934f-984f-48c1-8eaf-0b7f9a0de87c"/>
+				<imageExpression><![CDATA["leaf_banner_red.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="b093dbab-4eb2-497f-bff9-3470136db55b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Leaf Red Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="4a0bdaf2-8132-41ba-93c1-910c0c829c1d"/>
+				<text><![CDATA[Leaf Red SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="96a315dc-2b19-49ba-9120-e82300182cbf"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="21" height="15" uuid="947b8abf-89db-4a13-9d85-a3098a39111f"/>
+				<text><![CDATA[company_idcompany]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="21" y="19" width="21" height="15" uuid="fe764699-4e58-4c17-afb0-d9e282703ec6"/>
+				<text><![CDATA[company_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="42" y="19" width="21" height="15" uuid="d83a63c9-3016-4c73-a2dc-c1b3711e060d"/>
+				<text><![CDATA[company_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="63" y="19" width="21" height="15" uuid="47538ea5-be75-4bed-91ae-12f67776f4e4"/>
+				<text><![CDATA[company_TP_NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="84" y="19" width="21" height="15" uuid="ec75b524-6f40-4e6c-b5c4-868bd8fa55ae"/>
+				<text><![CDATA[company_Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="105" y="19" width="21" height="15" uuid="7e5422e7-45d1-4786-a8d3-6700c84f5ab4"/>
+				<text><![CDATA[company_Web]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="126" y="19" width="21" height="15" uuid="fe027a88-ba39-4847-b171-bc9bed800f32"/>
+				<text><![CDATA[company_online]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="147" y="19" width="21" height="15" uuid="cf5fc42f-dde5-486e-8050-ccf64d91fb06"/>
+				<text><![CDATA[company_info]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="168" y="19" width="21" height="15" uuid="2bf64272-8a14-467b-bdb7-3ae1e74e608a"/>
+				<text><![CDATA[company_Comment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="189" y="19" width="21" height="15" uuid="c7aa91b2-fc4e-4d65-b87c-c5434e77cefe"/>
+				<text><![CDATA[stock_idStock]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="210" y="19" width="21" height="15" uuid="c7f8f72c-0ced-4638-ba87-3099b2ead1cc"/>
+				<text><![CDATA[stock_Bill_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="231" y="19" width="21" height="15" uuid="f0f996b9-8e41-4119-a7f5-216082437414"/>
+				<text><![CDATA[stock_Bar_Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="252" y="19" width="21" height="15" uuid="7d82fbb1-666d-49d7-a6fc-6b8da0718c05"/>
+				<text><![CDATA[stock_PID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="273" y="19" width="21" height="15" uuid="0d5ec769-3eab-4496-866b-46c5fda82256"/>
+				<text><![CDATA[stock_Product_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="294" y="19" width="21" height="15" uuid="2a7116e3-12d1-4ac4-ae44-7b7a3a95489f"/>
+				<text><![CDATA[stock_Cat_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="315" y="19" width="21" height="15" uuid="a02aac54-1389-4db6-8520-8ce785a93d44"/>
+				<text><![CDATA[stock_Category_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="336" y="19" width="21" height="15" uuid="ee2392a5-ef5a-4ac2-95d5-e5487461475f"/>
+				<text><![CDATA[stock_Unit_Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="357" y="19" width="21" height="15" uuid="aca151c4-b810-4299-911f-c1d538fa6766"/>
+				<text><![CDATA[stock_Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="378" y="19" width="21" height="15" uuid="1d3ea2cd-bfbc-4748-9613-d9183434fa85"/>
+				<text><![CDATA[stock_Default_Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="399" y="19" width="21" height="15" uuid="fd30fd08-23c7-48aa-9f7c-331db07956ad"/>
+				<text><![CDATA[stock_MF_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="420" y="19" width="21" height="15" uuid="7aef4e96-be5c-42b4-ab95-1ae224803940"/>
+				<text><![CDATA[stock_Exp_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="441" y="19" width="21" height="15" uuid="ee0e34c1-9c9d-4eed-9c82-e7aeb3db7dee"/>
+				<text><![CDATA[stock_B_N]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="462" y="19" width="21" height="15" uuid="d80d5a51-3c93-471e-99ca-fd9a89a50059"/>
+				<text><![CDATA[stock_SID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="483" y="19" width="21" height="15" uuid="e4fecfb1-732a-4b8f-9fe9-f0dd8a10840d"/>
+				<text><![CDATA[stock_Supplier_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="504" y="19" width="21" height="15" uuid="d1f73555-1057-4a4b-850f-8fe737127c04"/>
+				<text><![CDATA[stock_Brand_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="525" y="19" width="21" height="15" uuid="8a642d68-571a-4e26-b331-637930d18060"/>
+				<text><![CDATA[stock_Private_Note]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="dc682284-026c-4e04-b299-1a14a118c526"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="21" height="15" uuid="12655ce1-f923-4668-8a43-e447c62d0f57"/>
+				<textFieldExpression><![CDATA[$F{company_idcompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="21" y="0" width="21" height="15" uuid="f7d1c80e-6b4c-438f-91b7-e012521aa6f9"/>
+				<textFieldExpression><![CDATA[$F{company_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="42" y="0" width="21" height="15" uuid="b37ae2d3-f203-41af-84d3-72a5cb26bd4f"/>
+				<textFieldExpression><![CDATA[$F{company_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="63" y="0" width="21" height="15" uuid="29e16cfa-6e12-44ee-9651-8ff6a8eb7f8d"/>
+				<textFieldExpression><![CDATA[$F{company_TP_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="84" y="0" width="21" height="15" uuid="5c4f562f-6450-4d66-80a3-b264070c1ebd"/>
+				<textFieldExpression><![CDATA[$F{company_Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="105" y="0" width="21" height="15" uuid="279f6d84-68d4-42a3-9286-59dafac93397"/>
+				<textFieldExpression><![CDATA[$F{company_Web}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="126" y="0" width="21" height="15" uuid="31e7d69f-2e8c-4363-b99b-1d1162e638e1"/>
+				<textFieldExpression><![CDATA[$F{company_online}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="147" y="0" width="21" height="15" uuid="a76e4993-ed1b-4ad0-8dc8-7776c554e19b"/>
+				<textFieldExpression><![CDATA[$F{company_info}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="168" y="0" width="21" height="15" uuid="a3e62a34-ce21-4dc1-898d-1e3e841807b2"/>
+				<textFieldExpression><![CDATA[$F{company_Comment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="189" y="0" width="21" height="15" uuid="9d1509a5-b61f-49b3-bbf4-8065dce31e2a"/>
+				<textFieldExpression><![CDATA[$F{stock_idStock}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="210" y="0" width="21" height="15" uuid="cabd13ef-a06d-4d4a-aa48-55081ffa6cea"/>
+				<textFieldExpression><![CDATA[$F{stock_Bill_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="231" y="0" width="21" height="15" uuid="19a22ced-3653-450a-b6c5-6caddfd97b28"/>
+				<textFieldExpression><![CDATA[$F{stock_Bar_Code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="252" y="0" width="21" height="15" uuid="eabd6f5d-9395-4573-9308-59e1974db135"/>
+				<textFieldExpression><![CDATA[$F{stock_PID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="273" y="0" width="21" height="15" uuid="4df8cbac-c6b4-4d7f-8d37-8a8267379749"/>
+				<textFieldExpression><![CDATA[$F{stock_Product_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="294" y="0" width="21" height="15" uuid="a248c1c9-40f8-4fcf-89b7-eda26978ebf9"/>
+				<textFieldExpression><![CDATA[$F{stock_Cat_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="315" y="0" width="21" height="15" uuid="30166f0c-ce03-4132-a11e-cc2c457601a2"/>
+				<textFieldExpression><![CDATA[$F{stock_Category_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="336" y="0" width="21" height="15" uuid="1f459b03-aa09-4cf8-a67f-3f8ce1327681"/>
+				<textFieldExpression><![CDATA[$F{stock_Unit_Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="357" y="0" width="21" height="15" uuid="60d14715-2498-45fc-ae2a-893192c462f6"/>
+				<textFieldExpression><![CDATA[$F{stock_Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="378" y="0" width="21" height="15" uuid="feef1972-62cd-4e7b-8b5a-c88af72ba95f"/>
+				<textFieldExpression><![CDATA[$F{stock_Default_Unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="399" y="0" width="21" height="15" uuid="252f2730-8017-4c8e-874b-cc2b9d7fa566"/>
+				<textFieldExpression><![CDATA[$F{stock_MF_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="420" y="0" width="21" height="15" uuid="7fb95374-4305-4cb2-b290-1b7d12f8493d"/>
+				<textFieldExpression><![CDATA[$F{stock_Exp_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="441" y="0" width="21" height="15" uuid="b24ac93c-ba98-40c1-b183-8d0bf9f95c79"/>
+				<textFieldExpression><![CDATA[$F{stock_B_N}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="462" y="0" width="21" height="15" uuid="3a42ce9b-aff7-4953-aa3c-3d4cac17ece5"/>
+				<textFieldExpression><![CDATA[$F{stock_SID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="483" y="0" width="21" height="15" uuid="d285e881-035a-43c2-afcd-a4a56f321a7b"/>
+				<textFieldExpression><![CDATA[$F{stock_Supplier_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="504" y="0" width="21" height="15" uuid="082b178c-fa22-4866-9272-cec136d299e9"/>
+				<textFieldExpression><![CDATA[$F{stock_Brand_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="525" y="0" width="21" height="15" uuid="98c9db95-2558-41fd-8f78-710a2d3457ef"/>
+				<textFieldExpression><![CDATA[$F{stock_Private_Note}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="a0efe6eb-3ad6-41c2-a2d6-92504d6d8f71"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="9e94d266-95a7-4757-ab78-29aad3ae7636"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="a27560a7-cc02-4716-9489-08c27589fb71"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="9c58d64d-dc28-414f-b336-02af31d4a3e6"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

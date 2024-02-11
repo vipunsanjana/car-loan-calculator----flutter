@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="inidreport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a473c100-b691-4c92-83d1-058f2a9ee3bd">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="34"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     sales.`saleid` AS sales_saleid,
+     sales.`INID` AS sales_INID,
+     sales.`Cid` AS sales_Cid,
+     sales.`Customer_Name` AS sales_Customer_Name,
+     sales.`Total_Qty` AS sales_Total_Qty,
+     sales.`Total_Bill` AS sales_Total_Bill,
+     sales.`Status` AS sales_Status,
+     sales.`Balance` AS sales_Balance
+FROM
+     `sales` sales]]>
+	</queryString>
+	<field name="sales_saleid" class="java.lang.Integer"/>
+	<field name="sales_INID" class="java.lang.Integer"/>
+	<field name="sales_Cid" class="java.lang.Integer"/>
+	<field name="sales_Customer_Name" class="java.lang.String"/>
+	<field name="sales_Total_Qty" class="java.lang.String"/>
+	<field name="sales_Total_Bill" class="java.lang.String"/>
+	<field name="sales_Status" class="java.lang.String"/>
+	<field name="sales_Balance" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="72f30eb2-f182-4f8a-8141-696d58781cf6"/>
+				<imageExpression><![CDATA["logo.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="c5e15587-7835-487e-af13-3747a73dcabb"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[YOUR Company]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="117" y="46" width="157" height="22" uuid="3b450d71-d117-4417-a685-2a0badfa3ab3"/>
+				<text><![CDATA[Happy POS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="6dc82875-b82a-44d6-8ba5-6478b84c09b6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="44" height="15" uuid="71f9da53-1557-4c00-b746-4ef424e84ac6"/>
+				<text><![CDATA[sale id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="44" y="20" width="51" height="15" uuid="014280fb-22f4-4896-bcf5-8c3a17675272"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[INID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="95" y="20" width="43" height="15" uuid="383940e0-41ed-4bc4-970a-d7521cddd71e"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[Cid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="138" y="19" width="100" height="15" uuid="4deb3b4a-a055-40b9-900b-82c218dc036a"/>
+				<text><![CDATA[Customer_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="238" y="20" width="69" height="15" uuid="5d435981-e871-4ba4-a688-cb8f7396819c"/>
+				<text><![CDATA[Total_Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="307" y="21" width="69" height="15" uuid="7831e3aa-ee27-45b6-b933-5bd5be85da75"/>
+				<text><![CDATA[Total_Bill]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="376" y="21" width="68" height="15" uuid="84a2f718-2af5-4d8e-9c3a-4b7fa8ad3fde"/>
+				<text><![CDATA[Status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="444" y="21" width="69" height="15" uuid="a676108d-cc14-4e1a-9971-6fe71ffa8201"/>
+				<text><![CDATA[Balance]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="068804bc-0486-46c0-9c26-5fa3d0880f33"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="44" height="15" uuid="a987ed9d-5a55-4382-9967-45b6964c5b2a"/>
+				<textFieldExpression><![CDATA[$F{sales_saleid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="44" y="0" width="51" height="15" uuid="493a3c40-c9b0-4e4e-8d9c-c793aa7ebb90"/>
+				<textFieldExpression><![CDATA[$F{sales_INID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="95" y="0" width="43" height="15" uuid="ae4db4b6-d289-4c6e-8333-d9eedd215c8b"/>
+				<textFieldExpression><![CDATA[$F{sales_Cid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="138" y="0" width="100" height="15" uuid="cbd2212e-3c16-485e-917d-3512798f6502"/>
+				<textFieldExpression><![CDATA[$F{sales_Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="238" y="0" width="69" height="15" uuid="ff9692ae-2522-4e71-bb1f-ba1f790748cb"/>
+				<textFieldExpression><![CDATA[$F{sales_Total_Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="307" y="1" width="69" height="15" uuid="97f9c4c5-df8c-405b-8411-534b4a2c79c2"/>
+				<textFieldExpression><![CDATA[$F{sales_Total_Bill}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="376" y="0" width="68" height="15" uuid="eb8b5039-cbcb-44e2-97a2-9dcb7a7a6b16"/>
+				<textFieldExpression><![CDATA[$F{sales_Status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="444" y="0" width="69" height="15" uuid="e348d7da-31f1-4136-a4d4-340a75e013b2"/>
+				<textFieldExpression><![CDATA[$F{sales_Balance}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d1b5d6b5-6b7f-43d8-bd32-15e8430fc812"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="d9587fb8-f922-426c-95c8-f34e84dc4b5a"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="79eec36a-2c66-4adf-b15f-85edd13296ec"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="ccaf669d-46ed-4a3f-b85b-4fae0c6c9653"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
